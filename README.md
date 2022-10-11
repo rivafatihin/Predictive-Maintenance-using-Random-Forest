@@ -11,3 +11,20 @@ This project is approach of Machine learning implementation (Random Forest) for 
 Dataset source from UCI link here: https://archive.ics.uci.edu/ml/datasets/AI4I+2020+Predictive+Maintenance+Dataset
 
 ## Objective
+This project is try to answer below business question:
+1. What is the most suitable Random Forest model that fit for Predictive Maintenance reperesent by dataset?
+2. What is features/attribute the model ‘thinks’ are most important in determining failure of the machine?
+
+# 2. Data understanding
+
+Feature information:
+*   `UDI`: unique identifier ranging from 1 to 10000.
+*   `Product ID`: Product Identification number.
+*   `Type`: consisting of a letter L, M, or H for low (50% of all products), medium (30%), and high (20%) as product quality variants and a variant-specific serial number.
+*   `Air temperature [K]`: generated using a random walk process later normalized to a standard deviation of 2 K around 300 K.
+*   `Process temperature [K]`: generated using a random walk process normalized to a standard deviation of 1 K, added to the air temperature plus 10 K.
+*   `Rotational speed [rpm]`: calculated from powepower of 2860 W, overlaid with a normally distributed noise.
+*   `Torque [Nm]`: torque values are normally distributed around 40 Nm with an Ïƒ = 10 Nm and no negative values.
+*   `Tool wear [min]`: The quality variants H/M/L add 5/3/2 minutes of tool wear to the used tool in the process. and a 'machine failure' label that indicates, whether the machine has failed in this particular data point for any of the following failure modes are true.
+*   `Target`: Categorixe condition of the Machine = Failure or Not.
+*   `Failure Type`: Type of Failure, there are tool wear failure (TWF), Heat Dissipation Failure (HDF), Power Failure (PWF), Overstrain Failure (OSF), Random Failures (RNF).
