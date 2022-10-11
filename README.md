@@ -28,3 +28,83 @@ Feature information:
 *   `Tool wear [min]`: The quality variants H/M/L add 5/3/2 minutes of tool wear to the used tool in the process. and a 'machine failure' label that indicates, whether the machine has failed in this particular data point for any of the following failure modes are true.
 *   `Target`: Categorixe condition of the Machine = Failure or Not.
 *   `Failure Type`: Type of Failure, there are tool wear failure (TWF), Heat Dissipation Failure (HDF), Power Failure (PWF), Overstrain Failure (OSF), Random Failures (RNF).
+
+
+# 3. Perform Exploratory Data Analysis
+![image](https://user-images.githubusercontent.com/114860846/195148626-0bc35828-a389-4d7e-a23a-1a062a38e607.png)
+
+1. The true continuous numeric features: `Air temperature [K]`, `Process temperature [K]`,`Rotational speed [rpm]`, `Torque [Nm]` & `Tool wear [min]` which  is good (no need to transform them to approximate normal distribution).
+2. In terms of the target variable, `Target = 0` is more frequent in the dataset. But, the imbalance condition is NOT severe (still OK).
+
+![image](https://user-images.githubusercontent.com/114860846/195148793-b9de98ba-d69d-4825-8b6f-09e39c1476f0.png)
+
+Let's say target = 1, means Failure, and admit_status = 0, means Not Failure
+We can say that, machine with Low capacity has more frequent to be Failure compare to High or Medium.
+
+
+# 4. Random Forest Model 
+
+## Classification Task Definition
+TASK = To Predict Condition of Machine Failure or Not Failure
+
+*   Failure = POSITIVE
+*   No Failure =  NEGATIVE
+
+*   TRUE POSITIVE = Predicted Failure, actual is Failure
+*   TRUE NEGATIVE = Predicted No Failure, actual is No Failure
+*   FALSE POSITIVE = Predicted Failure, actual is No Failure
+*   FALSE NEGATIVE = Predicted No Failure, actual is Failure
+
+Evaluation Metric:
+
+    - PRECISSION = TP/(TP+FP)
+
+    - RECALL = TP/(TP+FN)
+
+    - F1 SCORE = 2 * (precision * recall)/(precision + recall)
+
+    - ROC AUC
+    
+ ## Create  Model
+ - Base Model
+ - Undersampling Model
+ - Oversampling Model
+ - Combine Model
+ 
+# 5. Evaluation, Choose The Best Model & Check Feature Importance
+
+## Model with highest Accuracy
+Model with highest Accuracy configuration : 
+*   oversampled coef = 0.1
+*   undersampled coef = 0.1
+
+## Model with highest Precission
+Model with highest Precission configuration : 
+*   oversampled coef = 0.1
+*   undersampled coef = 0.1
+
+## Model with highest F1 Score
+Model with highest F1 Score configuration : 
+*   oversampled coef = 0.1
+*   undersampled coef = 0.1
+
+## Model with highest Recall
+Model with highest Recall configuration : 
+*   oversampled coef = 0.1
+*   undersampled coef = 0.9
+
+## Feature Importance Check
+Top 3 Feature Importance of this Random Forest model are `Torque [Nm]`, `Air temperature [K]` & `Process temperature [K]`.
+
+
+# 6. Conclusion
+Best Random Forest model for this project is Combine Undersampling & Oversampling method (with higest RECALL score)
+Model configuration: 
+*   oversampled coef = 0.1
+*   undersampled coef = 0.9  
+
+Top 3 Feature Importance of this Random Forest model are:
+- `Torque [Nm]`, 
+- `Air temperature [K]`  
+- `Process temperature [K]`
+
