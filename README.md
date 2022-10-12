@@ -108,6 +108,6 @@ Top 3 Feature Importance of this Random Forest model are:
 - `Air temperature [K]`  
 - `Process temperature [K]`
 
-# Credit & Acknowledgement fro dataset source:
+# Credit & Acknowledgement for dataset source:
 Dua, D. and Graff, C. (2019). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.
 
