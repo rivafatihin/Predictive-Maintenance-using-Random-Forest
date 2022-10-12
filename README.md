@@ -3,7 +3,7 @@
 # 1. Business Framing & Project overview
 
 ## Background
-Manufacturing equipment is often utilized without a planned maintenance approach. Such a strategy frequently results in unplanned downtime, owing to unexpected failures. Scheduled maintenance replaces components frequently to avoid unexpected equipment stoppages, but increases the time associated with machine non-operation and maintenance cost. The emergence of Industry 4.0 and smart systems is leading to increasing attention to predictive maintenance (PdM) strategies that can decrease the cost of downtime and increase the availability (utilization rate) of manufacturing equipment. PdM also has the potential to foster sustainable practices in manufacturing by maximizing the useful lives of components.
+Manufacturing equipment / machineries are often used without a planned to maintenance. Such strategies often result in unexpected downtime due to unexpected failures. Planned maintenance often replaces components to avoid unexpected equipment failures, but increases downtime and maintenance costs. The emergence of Industry 4.0 and Artificial intelligent has increased focus on predictive maintenance (PdM) strategies that can reduce the cost of downtime and increase the availability (uptime) of manufacturing assets. PdM also has the potential to promote sustainable manufacturing practices by maximizing the useful life of components.
 
 This project is approach of Machine learning implementation (Random Forest) for Predictive Maintenance.
 
