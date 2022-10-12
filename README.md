@@ -39,7 +39,7 @@ Feature information:
 ![image](https://user-images.githubusercontent.com/114860846/195148793-b9de98ba-d69d-4825-8b6f-09e39c1476f0.png)
 
 Let's say target = 1, means Failure, and admit_status = 0, means Not Failure
-We can say that, machine with Low capacity has more frequent to be Failure compare to High or Medium.
+We can say that, machine with Low quality has more frequent to be Failure compare to High or Medium quality.
 
 
 # 4. Random Forest Model 
@@ -91,7 +91,7 @@ Model with highest F1 Score configuration :
 ## Model with highest Recall
 Model with highest Recall configuration : 
 *   oversampled coef = 0.1
-*   undersampled coef = 0.9
+*   undersampled coef = 0.6
 
 ## Feature Importance Check
 Top 3 Feature Importance of this Random Forest model are `Torque [Nm]`, `Air temperature [K]` & `Process temperature [K]`.
@@ -101,10 +101,13 @@ Top 3 Feature Importance of this Random Forest model are `Torque [Nm]`, `Air tem
 Best Random Forest model for this project is Combine Undersampling & Oversampling method (with higest RECALL score)
 Model configuration: 
 *   oversampled coef = 0.1
-*   undersampled coef = 0.9  
+*   undersampled coef = 0.6  
 
 Top 3 Feature Importance of this Random Forest model are:
 - `Torque [Nm]`, 
 - `Air temperature [K]`  
 - `Process temperature [K]`
+
+# Credit & Acknowledgement fro dataset source:
+Dua, D. and Graff, C. (2019). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.
 
