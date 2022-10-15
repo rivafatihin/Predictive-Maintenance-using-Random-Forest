@@ -38,7 +38,7 @@ Feature information:
 
 ![image](https://user-images.githubusercontent.com/114860846/195148793-b9de98ba-d69d-4825-8b6f-09e39c1476f0.png)
 
-Let's say target = 1, means Failure, and admit_status = 0, means Not Failure
+Let's say target = 1, means Failure, and target = 0, means Not Failure
 We can say that, machine with Low quality has more frequent to be Failure compare to High or Medium quality.
 
 
